@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-df = pd.read_excel("C:/Users/yangj/OneDrive/바탕 화면/캡스톤2/capstone2/capstone2/분석자료/사망자test.xlsx")
+df = pd.read_excel("C:/Users/yangj/OneDrive/바탕 화면/캡스톤2/capstone2/capstone2/분석자료/부상자test.xlsx")
 #print(df)
 df_list = df.values.tolist()
 #print(df_list)
@@ -20,7 +20,7 @@ for one in range(0,len(df_list)):
         new.append([df_list[one][5], df_list[one][t]])
     for p in range(7, 8):
         new.append([df_list[one][6], df_list[one][p]])
-   
+
 del(new[0])
 print(new[0][1])
 a=[0]
@@ -37,4 +37,4 @@ del(b[0])
 col_name =['source','target']
 df_att = pd.DataFrame([ x for x in zip(a,b)],columns=col_name)
 #df_att = pd.DataFrame(df_list,)
-df_att.to_excel('사망자text_Edge.xlsx', index=False)
+df_att.to_excel('부상자text_Edge.xlsx', index=False)
